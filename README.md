@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,147 +11,22 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="style.css">
+<style>
 
-</head>
-
-<body>
-
-<header id="header">
-
-<nav class="nav">
-
-<div class="logo">
-Agro<span>Forte</span>
-</div>
-
-<div class="nav-links">
-<a href="#inicio">Início</a>
-<a href="#sobre">Sobre</a>
-<a href="#tecnologia">Tecnologia</a>
-<a href="#sustentabilidade">Sustentabilidade</a>
-<a href="#contato">Contato</a>
-</div>
-
-</nav>
-
-</header>
-
-<section class="hero" id="inicio">
-
-<div class="hero-overlay"></div>
-
-<div class="hero-content">
-
-<div class="badge">
-🌱 Agricultura Inteligente
-</div>
-
-<h1>
-Transformando o Agro com
-<span>Tecnologia Sustentável</span>
-</h1>
-
-<p>
-Soluções modernas para aumentar a produtividade,
-preservar recursos naturais e impulsionar o futuro
-do agronegócio brasileiro.
-</p>
-
-<div class="hero-buttons">
-
-<a href="#sobre" class="btn">
-Conheça Mais
-</a>
-
-<a href="#contato" class="btn btn-outline">
-Fale Conosco
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-<section class="stats">
-
-<div class="stat-card">
-<h2 class="counter" data-target="15000">0</h2>
-<p>Hectares Monitorados</p>
-</div>
-
-<div class="stat-card">
-<h2 class="counter" data-target="98">0</h2>
-<p>% Sustentabilidade</p>
-</div>
-
-<div class="stat-card">
-<h2 class="counter" data-target="250">0</h2>
-<p>Projetos Realizados</p>
-</div>
-
-<div class="stat-card">
-<h2 class="counter" data-target="32">0</h2>
-<p>% Economia Hídrica</p>
-</div>
-
-</section>
-
-<section id="sobre">
-
-<div class="section-title">
-<h2>Sobre Nós</h2>
-<p>
-Promovemos inovação, produtividade e sustentabilidade
-para um agro mais forte e eficiente.
-</p>
-</div>
-
-<div class="about">
-
-<div class="about-text">
-
-<h3>Agro Inteligente</h3>
-
-<p>
-Utilizamos tecnologias avançadas para monitoramento,
-análise de dados e otimização de recursos agrícolas.
-</p>
-
-<p>
-Nossa missão é conectar inovação tecnológica com
-sustentabilidade ambiental.
-</p>
-
-</div>
-
-<div class="about-image">
-
-<img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1200">
-
-</div>
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
+font-family:'Poppins',sans-serif;
 }
 
 :root{
-
---primary:#0b6b38;
---secondary:#19c37d;
---accent:#72ff9a;
-
---dark:#07150f;
---dark2:#0d2419;
-
---light:#ffffff;
---text:#263238;
-
---glass:rgba(255,255,255,.12);
---border:rgba(255,255,255,.18);
-
+--verde:#0b6e3c;
+--verde-claro:#19c37d;
+--verde-neon:#73ff9d;
+--escuro:#06160f;
+--texto:#263238;
+--branco:#ffffff;
 }
 
 html{
@@ -160,211 +34,125 @@ scroll-behavior:smooth;
 }
 
 body{
-
-font-family:'Poppins',sans-serif;
-
-background:
-linear-gradient(
-180deg,
-#f6fff8,
-#ffffff
-);
-
-color:var(--text);
-
+background:#f8fffa;
+color:var(--texto);
 overflow-x:hidden;
-
 }
-
-/* SCROLLBAR */
-
-::-webkit-scrollbar{
-width:10px;
-}
-
-::-webkit-scrollbar-thumb{
-
-background:
-linear-gradient(
-180deg,
-var(--primary),
-var(--secondary)
-);
-
-border-radius:20px;
-
-}
-
-/* HEADER */
 
 header{
-
 position:fixed;
-
 top:0;
-left:0;
-
 width:100%;
-
 z-index:9999;
-
-backdrop-filter:blur(20px);
-
-background:
-rgba(255,255,255,.75);
-
-border-bottom:
-1px solid rgba(255,255,255,.4);
-
-transition:.4s;
-
-}
-
-header.scrolled{
-
-background:
-rgba(255,255,255,.95);
-
-box-shadow:
-0 10px 35px rgba(0,0,0,.08);
-
+backdrop-filter:blur(18px);
+background:rgba(255,255,255,.85);
+border-bottom:1px solid rgba(255,255,255,.3);
 }
 
 .nav{
-
 max-width:1400px;
-
 margin:auto;
-
-padding:22px 40px;
-
+padding:20px 40px;
 display:flex;
-
 justify-content:space-between;
 align-items:center;
-
 }
 
 .logo{
-
 font-size:2rem;
 font-weight:800;
-
-color:var(--primary);
-
+color:var(--verde);
 }
 
 .logo span{
-
-color:var(--secondary);
-
+color:var(--verde-claro);
 }
 
 .nav-links{
-
 display:flex;
-gap:35px;
-
+gap:30px;
 }
 
 .nav-links a{
-
 text-decoration:none;
-
 font-weight:600;
-
 color:#222;
-
 transition:.3s;
-
-position:relative;
-
-}
-
-.nav-links a::after{
-
-content:"";
-
-position:absolute;
-
-bottom:-8px;
-left:0;
-
-width:0%;
-height:3px;
-
-background:var(--secondary);
-
-transition:.3s;
-
-border-radius:20px;
-
-}
-
-.nav-links a:hover::after{
-
-width:100%;
-
 }
 
 .nav-links a:hover{
-
-color:var(--primary);
-
+color:var(--verde);
 }
-
-/* HERO */
 
 .hero{
 
 min-height:100vh;
 
-display:flex;
+background:
+linear-gradient(
+rgba(0,0,0,.55),
+rgba(0,0,0,.55)
+),
 
+url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1920');
+
+background-size:cover;
+background-position:center;
+
+display:flex;
 justify-content:center;
 align-items:center;
 
 text-align:center;
 
+padding:120px 30px;
+
 position:relative;
-
-padding:120px 20px;
-
-background:
-url("https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=2000");
-
-background-size:cover;
-background-position:center;
-
 overflow:hidden;
-
 }
 
-.hero-overlay{
+.hero::before{
+
+content:"";
 
 position:absolute;
 
-inset:0;
+width:800px;
+height:800px;
 
 background:
-linear-gradient(
-rgba(0,0,0,.65),
-rgba(0,0,0,.65)
-);
+rgba(115,255,157,.15);
+
+border-radius:50%;
+
+filter:blur(140px);
+
+animation:pulse 7s infinite;
+}
+
+@keyframes pulse{
+
+0%{
+transform:scale(1);
+}
+
+50%{
+transform:scale(1.15);
+}
+
+100%{
+transform:scale(1);
+}
 
 }
 
 .hero-content{
-
 position:relative;
-
 z-index:2;
-
-max-width:950px;
-
+max-width:1000px;
 }
 
-.badge{
+.hero-badge{
 
 display:inline-block;
 
@@ -372,47 +160,40 @@ padding:12px 24px;
 
 border-radius:50px;
 
-margin-bottom:25px;
-
 background:
-rgba(255,255,255,.12);
+rgba(255,255,255,.15);
 
-backdrop-filter:blur(15px);
+backdrop-filter:blur(10px);
 
 color:white;
 
+margin-bottom:25px;
+
 font-weight:600;
-
-border:
-1px solid rgba(255,255,255,.2);
-
 }
 
 .hero h1{
 
-font-size:5.8rem;
+font-size:5.5rem;
 
 line-height:1.05;
 
-font-weight:800;
-
 color:white;
 
-margin-bottom:25px;
+font-weight:800;
 
+margin-bottom:25px;
 }
 
 .hero h1 span{
-
-color:var(--accent);
-
+color:var(--verde-neon);
 }
 
 .hero p{
 
-font-size:1.25rem;
+font-size:1.2rem;
 
-line-height:1.8;
+line-height:1.9;
 
 color:white;
 
@@ -421,28 +202,13 @@ max-width:800px;
 margin:auto;
 
 margin-bottom:40px;
-
-opacity:.95;
-
 }
-
-.hero-buttons{
-
-display:flex;
-
-justify-content:center;
-
-gap:20px;
-
-flex-wrap:wrap;
-
-}
-
-/* BOTÕES */
 
 .btn{
 
-padding:18px 42px;
+display:inline-block;
+
+padding:18px 40px;
 
 border-radius:50px;
 
@@ -450,22 +216,19 @@ text-decoration:none;
 
 font-weight:700;
 
-transition:.4s;
-
-display:inline-block;
-
 background:
 linear-gradient(
 45deg,
-var(--primary),
-var(--secondary)
+var(--verde),
+var(--verde-claro)
 );
 
 color:white;
 
-box-shadow:
-0 15px 35px rgba(0,0,0,.25);
+transition:.4s;
 
+box-shadow:
+0 20px 40px rgba(0,0,0,.25);
 }
 
 .btn:hover{
@@ -473,29 +236,7 @@ box-shadow:
 transform:
 translateY(-5px);
 
-box-shadow:
-0 25px 50px rgba(0,0,0,.35);
-
 }
-
-.btn-outline{
-
-background:transparent;
-
-border:2px solid white;
-
-color:white;
-
-}
-
-.btn-outline:hover{
-
-background:white;
-color:var(--primary);
-
-}
-
-/* ESTATÍSTICAS */
 
 .stats{
 
@@ -503,67 +244,48 @@ max-width:1400px;
 
 margin:auto;
 
-margin-top:-90px;
-
-padding:0 6%;
+padding:0 8%;
 
 display:grid;
 
 grid-template-columns:
-repeat(auto-fit,minmax(260px,1fr));
+repeat(auto-fit,minmax(250px,1fr));
 
 gap:25px;
+
+margin-top:-80px;
 
 position:relative;
 
 z-index:5;
-
 }
 
 .stat-card{
+
+background:white;
 
 padding:35px;
 
 border-radius:25px;
 
-background:
-rgba(255,255,255,.85);
-
-backdrop-filter:blur(20px);
-
 box-shadow:
-0 20px 50px rgba(0,0,0,.08);
+0 20px 40px rgba(0,0,0,.08);
 
 text-align:center;
-
-transition:.4s;
-
-}
-
-.stat-card:hover{
-
-transform:
-translateY(-10px);
-
 }
 
 .stat-card h2{
 
 font-size:3rem;
 
-color:var(--primary);
+color:var(--verde);
 
 margin-bottom:10px;
-
 }
 
 .stat-card p{
-
 color:#666;
-
-font-weight:500;
-
-}/* SEÇÕES */
+}
 
 section{
 padding:120px 8%;
@@ -575,32 +297,17 @@ margin-bottom:70px;
 }
 
 .section-title h2{
-
-font-size:3.5rem;
-
-color:var(--dark);
-
-margin-bottom:20px;
-
-font-weight:800;
-
+font-size:3rem;
+color:var(--escuro);
+margin-bottom:15px;
 }
 
 .section-title p{
-
 max-width:800px;
-
 margin:auto;
-
 line-height:1.8;
-
 color:#666;
-
-font-size:1.1rem;
-
 }
-
-/* SOBRE */
 
 .about{
 
@@ -610,73 +317,195 @@ margin:auto;
 
 display:grid;
 
-grid-template-columns:1fr 1fr;
+grid-template-columns:
+1fr 1fr;
 
-gap:70px;
+gap:60px;
 
 align-items:center;
-
 }
 
-.about-text h3{
-
-font-size:2.5rem;
-
-color:var(--primary);
-
-margin-bottom:25px;
-
-}
-
-.about-text p{
-
-line-height:2;
-
-margin-bottom:20px;
-
-font-size:1.05rem;
-
-}
-
-.about-image{
-
-position:relative;
-
-}
-
-.about-image img{
+.about img{
 
 width:100%;
 
 border-radius:30px;
 
 box-shadow:
-0 30px 60px rgba(0,0,0,.15);
-
-transition:.5s;
-
+0 25px 50px rgba(0,0,0,.15);
 }
 
-.about-image img:hover{
+.about-text h3{
 
-transform:scale(1.03);
+font-size:2.2rem;
 
+color:var(--verde);
+
+margin-bottom:20px;
 }
 
-/* TECNOLOGIAS */
+.about-text p{
 
-.tech-section{
+line-height:2;
 
-background:
-linear-gradient(
-135deg,
-#f8fff9,
-#eefcf2
-);
-
+margin-bottom:15px;
 }
 
-.tech-grid{
+</style>
+</head>
+
+<body>
+
+<header>
+
+<nav class="nav">
+
+<div class="logo">
+Agro<span>Forte</span>
+</div>
+
+<div class="nav-links">
+<a href="#">Início</a>
+<a href="#">Sobre</a>
+<a href="#">Tecnologia</a>
+<a href="#">Projetos</a>
+<a href="#">Contato</a>
+</div>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="hero-badge">
+🌱 Agricultura Inteligente e Sustentável
+</div>
+
+<h1>
+O Futuro do Agro
+<span>Começa Agora</span>
+</h1>
+
+<p>
+Unimos tecnologia, inovação e sustentabilidade para impulsionar
+a produtividade no campo e construir um agronegócio mais eficiente,
+rentável e ambientalmente responsável.
+</p>
+
+<a href="#" class="btn">
+Conheça Nossa Solução
+</a>
+
+</div>
+
+</section>
+
+<section class="stats">
+
+<div class="stat-card">
+<h2>15K+</h2>
+<p>Hectares Monitorados</p>
+</div>
+
+<div class="stat-card">
+<h2>98%</h2>
+<p>Eficiência Sustentável</p>
+</div>
+
+<div class="stat-card">
+<h2>250+</h2>
+<p>Projetos Executados</p>
+</div>
+
+<div class="stat-card">
+<h2>32%</h2>
+<p>Economia Hídrica</p>
+</div>
+
+</section>
+
+<section>
+
+<div class="section-title">
+
+<h2>Quem Somos</h2>
+
+<p>
+Somos uma empresa focada em inovação agrícola,
+promovendo soluções modernas para maximizar resultados
+e reduzir impactos ambientais.
+</p>
+
+</div>
+
+<div class="about">
+
+<div class="about-text">
+
+<h3>Transformando o Agronegócio</h3>
+
+<p>
+A Agro Forte Sustentável combina tecnologia avançada,
+monitoramento inteligente e práticas sustentáveis para
+aumentar a produtividade rural.
+</p>
+
+<p>
+Nosso objetivo é criar um ecossistema agrícola moderno,
+eficiente e preparado para os desafios do futuro.
+</p>
+
+</div>
+
+<div>
+<img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1200">
+</div>
+
+<section>
+
+<div class="section-title">
+<h2>Tecnologias de Precisão</h2>
+<p>
+Aplicamos ferramentas avançadas para transformar dados em decisões estratégicas, elevando a produtividade e a sustentabilidade.
+</p>
+</div>
+
+<div class="cards">
+
+<div class="card">
+<div class="icon">🚜</div>
+<h3>Monitoramento Inteligente</h3>
+<p>
+Sensores e análises em tempo real permitem acompanhar lavouras com precisão e agir rapidamente.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">📡</div>
+<h3>Dados via Satélite</h3>
+<p>
+Mapeamento de áreas agrícolas para identificar oportunidades de melhoria e reduzir desperdícios.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🌾</div>
+<h3>Gestão da Produção</h3>
+<p>
+Planejamento eficiente para maximizar colheitas e otimizar recursos.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<style>
+
+.cards{
 
 max-width:1400px;
 
@@ -691,89 +520,381 @@ gap:30px;
 
 }
 
-.tech-card{
+.card{
 
-padding:40px;
+background:white;
+
+padding:35px;
 
 border-radius:30px;
-
-background:
-rgba(255,255,255,.85);
-
-backdrop-filter:blur(20px);
-
-border:
-1px solid rgba(255,255,255,.5);
 
 box-shadow:
 0 20px 50px rgba(0,0,0,.08);
 
 transition:.4s;
 
-position:relative;
-
-overflow:hidden;
-
 }
 
-.tech-card::before{
-
-content:"";
-
-position:absolute;
-
-top:0;
-left:0;
-
-width:100%;
-height:5px;
-
-background:
-linear-gradient(
-90deg,
-var(--primary),
-var(--secondary)
-);
-
-}
-
-.tech-card:hover{
+.card:hover{
 
 transform:
-translateY(-12px);
+translateY(-10px);
 
 box-shadow:
-0 35px 70px rgba(0,0,0,.12);
+0 30px 60px rgba(0,0,0,.12);
 
 }
 
-.tech-icon{
+.icon{
 
-font-size:4rem;
+font-size:3rem;
 
-margin-bottom:25px;
+margin-bottom:20px;
 
 }
 
-.tech-card h3{
+.card h3{
 
 font-size:1.4rem;
 
-margin-bottom:15px;
+color:var(--verde);
 
-color:var(--primary);
+margin-bottom:15px;
 
 }
 
-.tech-card p{
+.card p{
 
-line-height:1.8;
+line-height:1.9;
 
 color:#666;
 
 }
 
-/* BENEFÍCIOS */
+.dashboard{
+
+max-width:1400px;
+
+margin:auto;
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(280px,1fr));
+
+gap:25px;
+
+}
+
+.metric{
+
+background:
+linear-gradient(
+135deg,
+var(--verde),
+var(--verde-claro)
+);
+
+color:white;
+
+padding:40px;
+
+border-radius:25px;
+
+box-shadow:
+0 20px 50px rgba(0,0,0,.15);
+
+}
+
+.metric h2{
+
+font-size:3rem;
+
+margin-bottom:10px;
+
+}
+
+.metric p{
+
+opacity:.95;
+
+}
+
+.gallery{
+
+max-width:1400px;
+
+margin:auto;
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(300px,1fr));
+
+gap:25px;
+
+}
+
+.gallery img{
+
+width:100%;
+
+height:280px;
+
+object-fit:cover;
+
+border-radius:25px;
+
+transition:.5s;
+
+}
+
+.gallery img:hover{
+
+transform:scale(1.04);
+
+}
+
+</style>
+
+<section>
+
+<div class="section-title">
+
+<h2>Painel de Resultados</h2>
+
+<p>
+Indicadores que demonstram o impacto positivo da inovação no agronegócio moderno.
+</p>
+
+</div>
+
+<div class="dashboard">
+
+<div class="metric">
+<h2>+42%</h2>
+<p>Aumento médio de produtividade</p>
+</div>
+
+<div class="metric">
+<h2>-28%</h2>
+<p>Redução no consumo de água</p>
+</div>
+
+<div class="metric">
+<h2>+95%</h2>
+<p>Precisão nas análises agrícolas</p>
+</div>
+
+<div class="metric">
+<h2>24h</h2>
+<p>Monitoramento contínuo</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="section-title">
+
+<h2>Galeria Agro Premium</h2>
+
+<p>
+Conheça alguns dos ambientes e operações que representam o futuro do campo.
+</p>
+
+</div>
+
+<div class="gallery">
+
+<img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?q=80&w=1200">
+
+<img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1200">
+
+<img src="https://images.unsplash.com/photo-1472396961693-142e6e269027?q=80&w=1200">
+
+<img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1200">
+
+<img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200">
+
+<img src="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?q=80&w=1200">
+
+</div>
+
+</section>
+<style>
+
+.projects{
+
+max-width:1400px;
+margin:auto;
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(350px,1fr));
+
+gap:30px;
+
+}
+
+.project-card{
+
+background:white;
+
+border-radius:30px;
+
+overflow:hidden;
+
+box-shadow:
+0 20px 50px rgba(0,0,0,.08);
+
+transition:.4s;
+
+}
+
+.project-card:hover{
+
+transform:
+translateY(-12px);
+
+box-shadow:
+0 30px 70px rgba(0,0,0,.15);
+
+}
+
+.project-card img{
+
+width:100%;
+height:260px;
+
+object-fit:cover;
+
+}
+
+.project-content{
+
+padding:30px;
+
+}
+
+.project-content h3{
+
+color:var(--verde);
+
+margin-bottom:15px;
+
+font-size:1.5rem;
+
+}
+
+.project-content p{
+
+line-height:1.9;
+
+color:#666;
+
+}
+
+.timeline{
+
+max-width:1100px;
+
+margin:auto;
+
+position:relative;
+
+}
+
+.timeline::before{
+
+content:"";
+
+position:absolute;
+
+left:50%;
+
+transform:translateX(-50%);
+
+width:4px;
+
+height:100%;
+
+background:
+linear-gradient(
+to bottom,
+var(--verde),
+var(--verde-claro)
+);
+
+}
+
+.timeline-item{
+
+width:50%;
+
+padding:25px;
+
+position:relative;
+
+}
+
+.timeline-item:nth-child(odd){
+
+left:0;
+text-align:right;
+
+}
+
+.timeline-item:nth-child(even){
+
+left:50%;
+
+}
+
+.timeline-content{
+
+background:white;
+
+padding:25px;
+
+border-radius:25px;
+
+box-shadow:
+0 15px 40px rgba(0,0,0,.08);
+
+}
+
+.timeline-content h3{
+
+color:var(--verde);
+
+margin-bottom:10px;
+
+}
+
+.sustentavel{
+
+background:
+linear-gradient(
+135deg,
+#062216,
+#0b6e3c
+);
+
+color:white;
+
+}
+
+.sustentavel .section-title h2{
+color:white;
+}
+
+.sustentavel .section-title p{
+color:#d9ffe7;
+}
 
 .benefits{
 
@@ -784,9 +905,9 @@ margin:auto;
 display:grid;
 
 grid-template-columns:
-repeat(auto-fit,minmax(300px,1fr));
+repeat(auto-fit,minmax(280px,1fr));
 
-gap:30px;
+gap:25px;
 
 }
 
@@ -796,7 +917,212 @@ padding:35px;
 
 border-radius:25px;
 
+background:
+rgba(255,255,255,.08);
+
+backdrop-filter:blur(10px);
+
+border:
+1px solid rgba(255,255,255,.15);
+
+}
+
+.benefit h3{
+
+margin-bottom:15px;
+
+color:var(--verde-neon);
+
+}
+
+.benefit p{
+
+line-height:1.8;
+
+}
+
+</style>
+
+<section>
+
+<div class="section-title">
+
+<h2>Projetos em Destaque</h2>
+
+<p>
+Casos de sucesso que demonstram como a tecnologia pode transformar a agricultura moderna.
+</p>
+
+</div>
+
+<div class="projects">
+
+<div class="project-card">
+
+<img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=1200">
+
+<div class="project-content">
+
+<h3>Agricultura de Precisão</h3>
+
+<p>
+Implementação de sensores e análise de dados para aumentar produtividade e reduzir custos operacionais.
+</p>
+
+</div>
+
+</div>
+
+<div class="project-card">
+
+<img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?q=80&w=1200">
+
+<div class="project-content">
+
+<h3>Gestão Inteligente da Água</h3>
+
+<p>
+Sistemas avançados de irrigação que otimizam recursos hídricos e reduzem desperdícios.
+</p>
+
+</div>
+
+</div>
+
+<div class="project-card">
+
+<img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1200">
+
+<div class="project-content">
+
+<h3>Monitoramento Ambiental</h3>
+
+<p>
+Acompanhamento contínuo das condições ambientais para decisões mais eficientes.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="section-title">
+
+<h2>Nossa Evolução</h2>
+
+<p>
+Uma trajetória construída com inovação, responsabilidade e compromisso com o agronegócio.
+</p>
+
+</div>
+
+<div class="timeline">
+
+<div class="timeline-item">
+<div class="timeline-content">
+<h3>2018</h3>
+<p>Fundação da Agro Forte Sustentável.</p>
+</div>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-content">
+<h3>2020</h3>
+<p>Primeiros projetos de agricultura inteligente.</p>
+</div>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-content">
+<h3>2022</h3>
+<p>Expansão para monitoramento agrícola regional.</p>
+</div>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-content">
+<h3>2025</h3>
+<p>Integração de inteligência de dados e sustentabilidade.</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section class="sustentavel">
+
+<div class="section-title">
+
+<h2>Sustentabilidade na Prática</h2>
+
+<p>
+Tecnologia e responsabilidade ambiental trabalhando juntas para garantir um futuro mais verde.
+</p>
+
+</div>
+
+<div class="benefits">
+
+<div class="benefit">
+<h3>🌱 Preservação Ambiental</h3>
+<p>
+Redução de impactos ambientais através de práticas agrícolas sustentáveis.
+</p>
+</div>
+
+<div class="benefit">
+<h3>💧 Economia de Água</h3>
+<p>
+Uso inteligente dos recursos hídricos para maior eficiência no campo.
+</p>
+</div>
+
+<div class="benefit">
+<h3>♻️ Produção Responsável</h3>
+<p>
+Processos produtivos alinhados aos princípios de sustentabilidade.
+</p>
+</div>
+
+<div class="benefit">
+<h3>⚡ Eficiência Energética</h3>
+<p>
+Aplicação de tecnologias que reduzem desperdícios energéticos.
+</p>
+</div>
+
+</div>
+
+</section>
+<style>
+
+.testimonials{
+
+max-width:1400px;
+margin:auto;
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(320px,1fr));
+
+gap:30px;
+
+}
+
+.testimonial{
+
 background:white;
+
+padding:35px;
+
+border-radius:25px;
 
 box-shadow:
 0 20px 50px rgba(0,0,0,.08);
@@ -805,24 +1131,82 @@ transition:.4s;
 
 }
 
-.benefit:hover{
+.testimonial:hover{
 
 transform:
 translateY(-10px);
 
 }
 
-.benefit h3{
+.testimonial p{
 
-color:var(--primary);
+line-height:1.9;
 
-font-size:1.4rem;
+margin-bottom:20px;
 
-margin-bottom:15px;
+color:#555;
 
 }
 
-.benefit p{
+.client{
+
+display:flex;
+align-items:center;
+gap:15px;
+
+}
+
+.client img{
+
+width:60px;
+height:60px;
+
+border-radius:50%;
+
+object-fit:cover;
+
+}
+
+.client-info h4{
+
+color:var(--verde);
+
+}
+
+.faq{
+
+max-width:1100px;
+
+margin:auto;
+
+display:grid;
+
+gap:20px;
+
+}
+
+.faq-item{
+
+background:white;
+
+padding:30px;
+
+border-radius:20px;
+
+box-shadow:
+0 10px 30px rgba(0,0,0,.08);
+
+}
+
+.faq-item h3{
+
+color:var(--verde);
+
+margin-bottom:12px;
+
+}
+
+.faq-item p{
 
 line-height:1.8;
 
@@ -830,55 +1214,7 @@ color:#666;
 
 }
 
-/* SUSTENTABILIDADE */
-
-.sustainable{
-
-background:
-linear-gradient(
-135deg,
-var(--dark),
-var(--dark2)
-);
-
-position:relative;
-
-overflow:hidden;
-
-}
-
-.sustainable::before{
-
-content:"";
-
-position:absolute;
-
-width:700px;
-height:700px;
-
-background:
-rgba(255,255,255,.04);
-
-border-radius:50%;
-
-top:-250px;
-right:-250px;
-
-}
-
-.sustainable .section-title h2{
-
-color:white;
-
-}
-
-.sustainable .section-title p{
-
-color:#d7f8dd;
-
-}
-
-.sustainable-grid{
+.contact{
 
 max-width:1400px;
 
@@ -887,69 +1223,109 @@ margin:auto;
 display:grid;
 
 grid-template-columns:
-repeat(auto-fit,minmax(300px,1fr));
+1fr 1fr;
 
-gap:30px;
+gap:40px;
 
 }
 
-.sustainable-card{
+.contact-card{
 
-padding:35px;
+background:white;
+
+padding:40px;
 
 border-radius:25px;
 
-background:
-rgba(255,255,255,.08);
-
-backdrop-filter:blur(15px);
-
-border:
-1px solid rgba(255,255,255,.15);
-
-color:white;
-
-transition:.4s;
+box-shadow:
+0 20px 50px rgba(0,0,0,.08);
 
 }
 
-.sustainable-card:hover{
+.contact-card h3{
 
-transform:
-translateY(-10px);
+margin-bottom:20px;
+
+color:var(--verde);
 
 }
 
-.sustainable-card h3{
+.contact-card p{
+
+line-height:1.9;
 
 margin-bottom:15px;
 
-font-size:1.4rem;
+}
 
-color:var(--accent);
+.contact-form{
+
+display:flex;
+
+flex-direction:column;
+
+gap:15px;
 
 }
 
-.sustainable-card p{
+.contact-form input,
+.contact-form textarea{
 
-line-height:1.8;
+padding:18px;
+
+border:none;
+
+background:#f5f7f8;
+
+border-radius:15px;
+
+font-size:1rem;
 
 }
 
-/* CTA PREMIUM */
+.contact-form textarea{
+
+height:150px;
+
+resize:none;
+
+}
+
+.contact-form button{
+
+padding:18px;
+
+border:none;
+
+border-radius:50px;
+
+background:
+linear-gradient(
+45deg,
+var(--verde),
+var(--verde-claro)
+);
+
+color:white;
+
+font-weight:700;
+
+cursor:pointer;
+
+}
 
 .cta{
-
-padding:140px 8%;
-
-text-align:center;
 
 background:
 linear-gradient(
 135deg,
-var(--primary),
-var(--secondary)
+var(--verde),
+var(--verde-claro)
 );
+
+padding:140px 8%;
+
+text-align:center;
 
 color:white;
 
@@ -961,49 +1337,232 @@ font-size:4rem;
 
 margin-bottom:25px;
 
-font-weight:800;
-
 }
 
 .cta p{
 
-max-width:900px;
+max-width:800px;
 
 margin:auto;
 
 line-height:1.9;
 
-font-size:1.15rem;
-
 margin-bottom:40px;
 
 }
 
-.cta .btn{
+.cta a{
+
+display:inline-block;
+
+padding:18px 40px;
+
+border-radius:50px;
 
 background:white;
 
-color:var(--primary);
+color:var(--verde);
+
+font-weight:700;
+
+text-decoration:none;
 
 }
 
-.cta .btn:hover{
+</style>
 
-transform:
-translateY(-5px)
-scale(1.04);
+<section>
 
-}
+<div class="section-title">
+
+<h2>O Que Nossos Parceiros Dizem</h2>
+
+<p>
+A confiança de nossos clientes é o resultado do compromisso com qualidade, inovação e resultados.
+</p>
+
+</div>
+
+<div class="testimonials">
+
+<div class="testimonial">
+
+<p>
+"A Agro Forte transformou completamente nossa gestão agrícola. Hoje temos mais produtividade e menor desperdício."
+</p>
+
+<div class="client">
+
+<img src="https://randomuser.me/api/portraits/men/32.jpg">
+
+<div class="client-info">
+<h4>Carlos Mendes</h4>
+<span>Produtor Rural</span>
+</div>
+
+</div>
+
+</div>
+
+<div class="testimonial">
+
+<p>
+"A tecnologia aplicada pela equipe trouxe decisões muito mais precisas para nossa operação."
+</p>
+
+<div class="client">
+
+<img src="https://randomuser.me/api/portraits/women/44.jpg">
+
+<div class="client-info">
+<h4>Ana Ribeiro</h4>
+<span>Engenheira Agrônoma</span>
+</div>
+
+</div>
+
+</div>
+
+<div class="testimonial">
+
+<p>
+"Conseguimos reduzir custos e aumentar a eficiência graças às soluções inteligentes implementadas."
+</p>
+
+<div class="client">
+
+<img src="https://randomuser.me/api/portraits/men/51.jpg">
+
+<div class="client-info">
+<h4>Roberto Lima</h4>
+<span>Empresário do Agro</span>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="section-title">
+
+<h2>Perguntas Frequentes</h2>
+
+<p>
+Tire suas dúvidas sobre nossas soluções e serviços.
+</p>
+
+</div>
+
+<div class="faq">
+
+<div class="faq-item">
+<h3>Como funciona o monitoramento agrícola?</h3>
+<p>
+Utilizamos sensores, análise de dados e imagens para acompanhar as condições da produção em tempo real.
+</p>
+</div>
+
+<div class="faq-item">
+<h3>Quais são os benefícios da agricultura inteligente?</h3>
+<p>
+Maior produtividade, redução de custos, uso eficiente dos recursos e sustentabilidade.
+</p>
+</div>
+
+<div class="faq-item">
+<h3>As soluções servem para pequenas propriedades?</h3>
+<p>
+Sim. Nossos serviços podem ser adaptados para propriedades de diferentes tamanhos.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="section-title">
+
+<h2>Entre em Contato</h2>
+
+<p>
+Nossa equipe está pronta para ajudar você a levar sua produção para outro nível.
+</p>
+
+</div>
+
+<div class="contact">
+
+<div class="contact-card">
+
+<h3>Informações</h3>
+
+<p>📍 Brasil</p>
+
+<p>📞 (00) 00000-0000</p>
+
+<p>✉ contato@agroforte.com</p>
+
+<p>
+Atendimento especializado para produtores, cooperativas e empresas do agronegócio.
+</p>
+
+</div>
+
+<div class="contact-card">
+
+<form class="contact-form">
+
+<input type="text" placeholder="Seu nome">
+
+<input type="email" placeholder="Seu e-mail">
+
+<textarea placeholder="Sua mensagem"></textarea>
+
+<button type="submit">
+Enviar Mensagem
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="cta">
+
+<h2>
+Pronto para Evoluir seu Agronegócio?
+</h2>
+
+<p>
+Conheça soluções inovadoras que unem produtividade, tecnologia e sustentabilidade para o campo.
+</p>
+
+<a href="#">
+Solicitar Consultoria
+</a>
+
+</section>
+<style>
 
 /* FOOTER PREMIUM */
 
 footer{
 
-background:#04100b;
-
-padding:80px 8%;
+background:#04120c;
 
 color:white;
+
+padding:80px 8% 30px;
 
 }
 
@@ -1024,50 +1583,91 @@ gap:40px;
 
 .footer-col h3{
 
+color:var(--verde-neon);
+
 margin-bottom:20px;
 
 font-size:1.3rem;
 
-color:var(--accent);
+}
+
+.footer-col p,
+.footer-col a{
+
+color:rgba(255,255,255,.85);
+
+text-decoration:none;
+
+line-height:2;
+
+display:block;
 
 }
 
-.footer-col p{
+.footer-col a:hover{
 
-line-height:1.9;
-
-opacity:.9;
+color:var(--verde-neon);
 
 }
 
 .footer-bottom{
 
-text-align:center;
+max-width:1400px;
 
-margin-top:60px;
+margin:50px auto 0;
 
-padding-top:30px;
+padding-top:25px;
 
 border-top:
 1px solid rgba(255,255,255,.1);
 
-opacity:.8;
+text-align:center;
 
-}/* RESPONSIVIDADE */
+color:rgba(255,255,255,.7);
+
+}
+
+/* RESPONSIVIDADE */
 
 @media(max-width:1100px){
-
-.hero h1{
-font-size:4rem;
-}
 
 .about{
 grid-template-columns:1fr;
 }
 
+.contact{
+grid-template-columns:1fr;
+}
+
+.hero h1{
+font-size:4rem;
+}
+
+.timeline::before{
+left:20px;
+}
+
+.timeline-item,
+.timeline-item:nth-child(odd),
+.timeline-item:nth-child(even){
+
+width:100%;
+
+left:0;
+
+padding-left:60px;
+
+text-align:left;
+
+}
+
 }
 
 @media(max-width:900px){
+
+.nav{
+padding:20px;
+}
 
 .nav-links{
 display:none;
@@ -1082,104 +1682,129 @@ font-size:1rem;
 }
 
 .section-title h2{
-font-size:2.5rem;
+font-size:2.3rem;
 }
 
 .cta h2{
-font-size:2.7rem;
-}
-
-.stats{
-margin-top:-50px;
+font-size:2.6rem;
 }
 
 }
 
 @media(max-width:600px){
 
-.hero h1{
-font-size:2.3rem;
+.hero{
+padding:120px 20px;
 }
 
-.hero-buttons{
-flex-direction:column;
-align-items:center;
+.hero h1{
+font-size:2.2rem;
 }
 
 .btn{
+display:block;
 width:100%;
-max-width:300px;
 }
 
 .section-title h2{
 font-size:2rem;
 }
 
+.cta h2{
+font-size:2rem;
 }
 
-/* ANIMAÇÕES */
+}
 
-.fade-up{
+/* EFEITOS EXTRAS */
 
-opacity:0;
+.card,
+.project-card,
+.testimonial,
+.stat-card,
+.contact-card{
+
+transition:.4s;
+
+}
+
+.card:hover,
+.project-card:hover,
+.testimonial:hover,
+.contact-card:hover{
 
 transform:
-translateY(60px);
-
-transition:
-all .9s ease;
+translateY(-10px);
 
 }
 
-.fade-up.show{
-
-opacity:1;
-
-transform:
-translateY(0);
-
+html{
+scroll-behavior:smooth;
 }
 
-/* EFEITO DE BRILHO */
+</style>
 
-.glow{
+<footer>
 
-position:absolute;
+<div class="footer-grid">
 
-width:500px;
-height:500px;
+<div class="footer-col">
 
-border-radius:50%;
+<h3>Agro Forte</h3>
 
-background:
-rgba(114,255,154,.15);
+<p>
+Transformando o agronegócio através da tecnologia,
+inovação e sustentabilidade.
+</p>
 
-filter:blur(120px);
+</div>
 
-pointer-events:none;
+<div class="footer-col">
 
-z-index:0;
+<h3>Navegação</h3>
 
-animation:
-floatGlow 8s ease-in-out infinite;
+<a href="#">Início</a>
+<a href="#">Sobre</a>
+<a href="#">Tecnologias</a>
+<a href="#">Projetos</a>
+<a href="#">Contato</a>
 
-}
+</div>
 
-@keyframes floatGlow{
+<div class="footer-col">
 
-0%{
-transform:translateY(0px);
-}
+<h3>Serviços</h3>
 
-50%{
-transform:translateY(-30px);
-}
+<a href="#">Agricultura Inteligente</a>
+<a href="#">Monitoramento</a>
+<a href="#">Consultoria</a>
+<a href="#">Sustentabilidade</a>
 
-100%{
-transform:translateY(0px);
-}
+</div>
 
-}
+<div class="footer-col">
+
+<h3>Contato</h3>
+
+<p>📍 Brasil</p>
+<p>📞 (00) 00000-0000</p>
+<p>✉ contato@agroforte.com</p>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+
+© 2026 Agro Forte Sustentável.
+Todos os direitos reservados.
+
+</div>
+
+</footer>
+
+</body>
+</html>
 </div>
 
 </section>
