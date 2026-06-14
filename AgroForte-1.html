@@ -28,10 +28,8 @@ font-family:'Poppins',sans-serif;
 --verde-claro:#18c778;
 --verde-neon:#76ff9d;
 
---escuro:#06150f;
+--escuro:#07150f;
 --texto:#263238;
-
---branco:#fff;
 
 }
 
@@ -40,9 +38,13 @@ scroll-behavior:smooth;
 }
 
 body{
-background:#f8fffa;
-overflow-x:hidden;
+
+background:#f7fcf8;
+
 color:var(--texto);
+
+overflow-x:hidden;
+
 }
 
 /* HEADER */
@@ -59,12 +61,12 @@ width:100%;
 z-index:9999;
 
 background:
-rgba(255,255,255,.85);
+rgba(255,255,255,.90);
 
-backdrop-filter:blur(20px);
+backdrop-filter:blur(15px);
 
-border-bottom:
-1px solid rgba(255,255,255,.4);
+box-shadow:
+0 5px 25px rgba(0,0,0,.05);
 
 }
 
@@ -86,6 +88,7 @@ align-items:center;
 .logo{
 
 font-size:2rem;
+
 font-weight:800;
 
 color:var(--verde);
@@ -93,12 +96,15 @@ color:var(--verde);
 }
 
 .logo span{
+
 color:var(--verde-claro);
+
 }
 
 .nav-links{
 
 display:flex;
+
 gap:30px;
 
 }
@@ -107,9 +113,9 @@ gap:30px;
 
 text-decoration:none;
 
-font-weight:600;
-
 color:#222;
+
+font-weight:600;
 
 transition:.3s;
 
@@ -134,13 +140,13 @@ align-items:center;
 
 text-align:center;
 
-padding:120px 30px;
+padding:140px 20px;
 
 background:
 
 linear-gradient(
-rgba(0,0,0,.60),
-rgba(0,0,0,.60)
+rgba(0,0,0,.55),
+rgba(0,0,0,.55)
 ),
 
 url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=2000');
@@ -148,34 +154,9 @@ url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=2000');
 background-size:cover;
 background-position:center;
 
-position:relative;
-
-overflow:hidden;
-
-}
-
-.hero::before{
-
-content:"";
-
-position:absolute;
-
-width:900px;
-height:900px;
-
-background:
-rgba(118,255,157,.12);
-
-border-radius:50%;
-
-filter:blur(150px);
-
 }
 
 .hero-content{
-
-position:relative;
-z-index:2;
 
 max-width:1000px;
 
@@ -190,15 +171,13 @@ padding:12px 24px;
 border-radius:50px;
 
 background:
-rgba(255,255,255,.12);
-
-backdrop-filter:blur(10px);
+rgba(255,255,255,.15);
 
 color:white;
 
-font-weight:600;
-
 margin-bottom:25px;
+
+font-weight:600;
 
 }
 
@@ -207,8 +186,6 @@ margin-bottom:25px;
 font-size:5.5rem;
 
 line-height:1.05;
-
-font-weight:800;
 
 color:white;
 
@@ -224,15 +201,11 @@ color:var(--verde-neon);
 
 .hero p{
 
+color:white;
+
 font-size:1.2rem;
 
 line-height:1.9;
-
-color:white;
-
-max-width:850px;
-
-margin:auto;
 
 margin-bottom:40px;
 
@@ -261,9 +234,6 @@ color:white;
 
 transition:.4s;
 
-box-shadow:
-0 15px 35px rgba(0,0,0,.25);
-
 }
 
 .btn:hover{
@@ -274,7 +244,9 @@ translateY(-5px);
 }
 
 section{
+
 padding:120px 8%;
+
 }
 
 .section-title{
@@ -289,9 +261,9 @@ margin-bottom:70px;
 
 font-size:3rem;
 
-color:var(--escuro);
-
 margin-bottom:15px;
+
+color:var(--escuro);
 
 }
 
@@ -326,7 +298,6 @@ Agro<span>Forte</span>
 <a href="#inicio">Início</a>
 <a href="#sobre">Sobre</a>
 <a href="#solucoes">Soluções</a>
-<a href="#tecnologia">Tecnologia</a>
 <a href="#contato">Contato</a>
 
 </div>
@@ -340,22 +311,22 @@ Agro<span>Forte</span>
 <div class="hero-content">
 
 <div class="badge">
-Líder em Inovação Agrícola
+Tecnologia • Inovação • Sustentabilidade
 </div>
 
 <h1>
 
-Tecnologia que
-<span>Impulsiona</span>
-o Agronegócio
+O Futuro do
+<span>Agronegócio</span>
+
+Começa Aqui
 
 </h1>
 
 <p>
 
-Desenvolvemos soluções inteligentes para aumentar
-a produtividade, reduzir desperdícios e tornar
-o campo mais eficiente, competitivo e sustentável.
+Soluções inteligentes para aumentar produtividade,
+reduzir custos e transformar resultados no campo.
 
 </p>
 
@@ -376,23 +347,24 @@ max-width:1400px;
 
 margin:auto;
 
-margin-top:-80px;
+margin-top:-70px;
 
 padding:0 8%;
 
 display:grid;
 
 grid-template-columns:
-repeat(auto-fit,minmax(260px,1fr));
+repeat(auto-fit,minmax(250px,1fr));
 
 gap:25px;
 
 position:relative;
-z-index:5;
+
+z-index:10;
 
 }
 
-.stat-card{
+.stat{
 
 background:white;
 
@@ -400,23 +372,14 @@ padding:40px;
 
 border-radius:25px;
 
+text-align:center;
+
 box-shadow:
 0 20px 50px rgba(0,0,0,.08);
 
-text-align:center;
-
-transition:.4s;
-
 }
 
-.stat-card:hover{
-
-transform:
-translateY(-10px);
-
-}
-
-.stat-card h2{
+.stat h2{
 
 font-size:3rem;
 
@@ -426,7 +389,7 @@ margin-bottom:10px;
 
 }
 
-.stat-card p{
+.stat p{
 
 color:#666;
 
@@ -447,13 +410,13 @@ display:grid;
 grid-template-columns:
 1fr 1fr;
 
-gap:70px;
+gap:60px;
 
 align-items:center;
 
 }
 
-.about-image img{
+.about img{
 
 width:100%;
 
@@ -464,13 +427,13 @@ object-fit:cover;
 border-radius:30px;
 
 box-shadow:
-0 25px 50px rgba(0,0,0,.15);
+0 25px 60px rgba(0,0,0,.15);
 
 }
 
 .about-text h3{
 
-font-size:2.3rem;
+font-size:2.2rem;
 
 color:var(--verde);
 
@@ -484,7 +447,7 @@ line-height:2;
 
 margin-bottom:20px;
 
-font-size:1.05rem;
+color:#555;
 
 }
 
@@ -499,7 +462,7 @@ margin:auto;
 display:grid;
 
 grid-template-columns:
-repeat(auto-fit,minmax(350px,1fr));
+repeat(auto-fit,minmax(340px,1fr));
 
 gap:30px;
 
@@ -530,6 +493,7 @@ translateY(-10px);
 .card img{
 
 width:100%;
+
 height:240px;
 
 object-fit:cover;
@@ -546,9 +510,9 @@ padding:30px;
 
 color:var(--verde);
 
-margin-bottom:15px;
+font-size:1.5rem;
 
-font-size:1.4rem;
+margin-bottom:15px;
 
 }
 
@@ -564,24 +528,24 @@ color:#666;
 
 <section class="stats">
 
-<div class="stat-card">
+<div class="stat">
 <h2>15.000+</h2>
 <p>Hectares Monitorados</p>
 </div>
 
-<div class="stat-card">
+<div class="stat">
 <h2>250+</h2>
-<p>Projetos Executados</p>
+<p>Projetos Concluídos</p>
 </div>
 
-<div class="stat-card">
+<div class="stat">
 <h2>98%</h2>
-<p>Eficiência Operacional</p>
+<p>Taxa de Satisfação</p>
 </div>
 
-<div class="stat-card">
+<div class="stat">
 <h2>32%</h2>
-<p>Economia Hídrica Média</p>
+<p>Economia Média de Água</p>
 </div>
 
 </section>
@@ -593,33 +557,29 @@ color:#666;
 <h2>Quem Somos</h2>
 
 <p>
-Conectamos tecnologia, inteligência de dados e sustentabilidade para impulsionar a evolução do agronegócio.
+Especialistas em tecnologia agrícola, inovação sustentável e gestão inteligente para o campo.
 </p>
 
 </div>
 
 <div class="about">
 
-<div class="about-image">
-
 <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=1400">
-
-</div>
 
 <div class="about-text">
 
-<h3>Transformando o Campo com Inovação</h3>
+<h3>Transformando Dados em Resultados</h3>
 
 <p>
-A Agro Forte Sustentável atua no desenvolvimento de soluções modernas voltadas para monitoramento agrícola, gestão inteligente e aumento de produtividade.
+A Agro Forte Sustentável atua no desenvolvimento de soluções que unem tecnologia, monitoramento e inteligência de dados para elevar a produtividade agrícola.
 </p>
 
 <p>
-Nosso compromisso é oferecer ferramentas capazes de gerar resultados reais para produtores rurais, cooperativas e empresas do agronegócio.
+Nossa missão é oferecer ferramentas modernas que ajudem produtores e empresas do setor a tomar decisões mais precisas e eficientes.
 </p>
 
 <p>
-Combinamos conhecimento técnico, análise de dados e práticas sustentáveis para construir um futuro mais eficiente e competitivo para o setor.
+Combinamos inovação, sustentabilidade e análise estratégica para construir um agronegócio mais forte e competitivo.
 </p>
 
 </div>
@@ -635,7 +595,7 @@ Combinamos conhecimento técnico, análise de dados e práticas sustentáveis pa
 <h2>Nossas Soluções</h2>
 
 <p>
-Tecnologias desenvolvidas para otimizar recursos, reduzir custos e aumentar a eficiência da produção agrícola.
+Tecnologias desenvolvidas para aumentar a produtividade, reduzir desperdícios e melhorar os resultados da produção.
 </p>
 
 </div>
@@ -651,7 +611,7 @@ Tecnologias desenvolvidas para otimizar recursos, reduzir custos e aumentar a ef
 <h3>Agricultura de Precisão</h3>
 
 <p>
-Monitoramento detalhado das áreas produtivas para tomada de decisões estratégicas baseadas em dados.
+Monitoramento detalhado das lavouras utilizando sensores, imagens e análise de dados para decisões mais eficientes.
 </p>
 
 </div>
@@ -667,7 +627,7 @@ Monitoramento detalhado das áreas produtivas para tomada de decisões estratég
 <h3>Gestão Inteligente</h3>
 
 <p>
-Ferramentas para controle operacional, planejamento agrícola e otimização dos recursos disponíveis.
+Ferramentas para planejamento, controle operacional e otimização dos recursos agrícolas.
 </p>
 
 </div>
@@ -683,7 +643,7 @@ Ferramentas para controle operacional, planejamento agrícola e otimização dos
 <h3>Sustentabilidade Ambiental</h3>
 
 <p>
-Soluções focadas na preservação ambiental e no uso responsável dos recursos naturais.
+Estratégias voltadas para preservação ambiental, uso consciente dos recursos e produção responsável.
 </p>
 
 </div>
@@ -692,22 +652,26 @@ Soluções focadas na preservação ambiental e no uso responsável dos recursos
 
 </div>
 
-</section><style>
+</section>
+<style>
 
 /* TECNOLOGIA */
 
-.tech-section{
+.tech{
+
 background:
 linear-gradient(
 180deg,
-#f8fffa,
-#eefbf3
+#f7fcf8,
+#eef9f2
 );
+
 }
 
 .tech-grid{
 
 max-width:1400px;
+
 margin:auto;
 
 display:grid;
@@ -723,7 +687,7 @@ gap:30px;
 
 background:white;
 
-padding:35px;
+padding:30px;
 
 border-radius:30px;
 
@@ -744,6 +708,7 @@ translateY(-10px);
 .tech-card img{
 
 width:100%;
+
 height:220px;
 
 object-fit:cover;
@@ -760,8 +725,6 @@ color:var(--verde);
 
 margin-bottom:15px;
 
-font-size:1.4rem;
-
 }
 
 .tech-card p{
@@ -777,6 +740,7 @@ color:#666;
 .dashboard{
 
 max-width:1400px;
+
 margin:auto;
 
 display:grid;
@@ -804,7 +768,7 @@ var(--verde-claro)
 color:white;
 
 box-shadow:
-0 20px 50px rgba(0,0,0,.15);
+0 20px 50px rgba(0,0,0,.12);
 
 }
 
@@ -817,8 +781,6 @@ margin-bottom:10px;
 }
 
 .metric p{
-
-opacity:.95;
 
 line-height:1.8;
 
@@ -844,6 +806,7 @@ gap:25px;
 .gallery img{
 
 width:100%;
+
 height:280px;
 
 object-fit:cover;
@@ -862,14 +825,14 @@ transform:scale(1.03);
 
 </style>
 
-<section id="tecnologia" class="tech-section">
+<section class="tech">
 
 <div class="section-title">
 
 <h2>Tecnologia Aplicada ao Campo</h2>
 
 <p>
-Utilizamos ferramentas modernas para transformar informações em produtividade e eficiência.
+Ferramentas modernas que conectam dados, automação e inteligência para impulsionar a produtividade agrícola.
 </p>
 
 </div>
@@ -883,7 +846,7 @@ Utilizamos ferramentas modernas para transformar informações em produtividade 
 <h3>Monitoramento por Drones</h3>
 
 <p>
-Captura de imagens aéreas para identificação de falhas, análise da vegetação e acompanhamento das lavouras.
+Mapeamento aéreo e inspeção de lavouras para identificar falhas, pragas e oportunidades de melhoria.
 </p>
 
 </div>
@@ -892,10 +855,10 @@ Captura de imagens aéreas para identificação de falhas, análise da vegetaç�
 
 <img src="https://images.unsplash.com/photo-1516467508483-a7212febe31a?q=80&w=1200">
 
-<h3>Análise de Dados</h3>
+<h3>Análise Inteligente de Dados</h3>
 
 <p>
-Transformamos dados agrícolas em informações estratégicas para decisões mais seguras e precisas.
+Transformação de dados agrícolas em informações estratégicas para decisões mais seguras e rentáveis.
 </p>
 
 </div>
@@ -907,7 +870,7 @@ Transformamos dados agrícolas em informações estratégicas para decisões mai
 <h3>Monitoramento Climático</h3>
 
 <p>
-Acompanhamento contínuo das condições ambientais para reduzir riscos e otimizar a produção.
+Acompanhamento das condições ambientais para reduzir riscos e aumentar a previsibilidade da produção.
 </p>
 
 </div>
@@ -920,10 +883,10 @@ Acompanhamento contínuo das condições ambientais para reduzir riscos e otimiz
 
 <div class="section-title">
 
-<h2>Resultados que Geram Valor</h2>
+<h2>Indicadores de Desempenho</h2>
 
 <p>
-Indicadores que demonstram o impacto da inovação no desempenho agrícola.
+Resultados que demonstram o impacto da tecnologia e da gestão inteligente no agronegócio.
 </p>
 
 </div>
@@ -931,43 +894,23 @@ Indicadores que demonstram o impacto da inovação no desempenho agrícola.
 <div class="dashboard">
 
 <div class="metric">
-
 <h2>+42%</h2>
-
-<p>
-Aumento médio da produtividade em propriedades atendidas.
-</p>
-
+<p>Aumento médio de produtividade.</p>
 </div>
 
 <div class="metric">
-
 <h2>-28%</h2>
-
-<p>
-Redução do consumo de água através de monitoramento inteligente.
-</p>
-
+<p>Redução no consumo de água.</p>
 </div>
 
 <div class="metric">
-
 <h2>+95%</h2>
-
-<p>
-Precisão em diagnósticos e análises de campo.
-</p>
-
+<p>Precisão em diagnósticos agrícolas.</p>
 </div>
 
 <div class="metric">
-
 <h2>24h</h2>
-
-<p>
-Monitoramento contínuo das operações agrícolas.
-</p>
-
+<p>Monitoramento contínuo das operações.</p>
 </div>
 
 </div>
@@ -981,7 +924,7 @@ Monitoramento contínuo das operações agrícolas.
 <h2>Galeria de Projetos</h2>
 
 <p>
-Conheça ambientes e operações que representam a nova geração do agronegócio.
+Conheça alguns exemplos de ambientes, operações e tecnologias utilizadas no agronegócio moderno.
 </p>
 
 </div>
@@ -1002,9 +945,10 @@ Conheça ambientes e operações que representam a nova geração do agronegóci
 
 </div>
 
-</section><style>
+</section>
+<style>
 
-/* PROJETOS PREMIUM */
+/* PROJETOS */
 
 .projects{
 
@@ -1038,14 +982,14 @@ transition:.4s;
 .project:hover{
 
 transform:
-translateY(-12px);
+translateY(-10px);
 
 }
 
 .project img{
 
 width:100%;
-height:260px;
+height:250px;
 
 object-fit:cover;
 
@@ -1061,9 +1005,9 @@ padding:30px;
 
 color:var(--verde);
 
-font-size:1.5rem;
-
 margin-bottom:15px;
+
+font-size:1.5rem;
 
 }
 
@@ -1080,6 +1024,7 @@ color:#666;
 .timeline{
 
 max-width:1100px;
+
 margin:auto;
 
 position:relative;
@@ -1159,7 +1104,7 @@ margin-bottom:10px;
 background:
 linear-gradient(
 135deg,
-#071d14,
+#061a12,
 #0b6e3c
 );
 
@@ -1168,11 +1113,15 @@ color:white;
 }
 
 .sustentabilidade .section-title h2{
+
 color:white;
+
 }
 
 .sustentabilidade .section-title p{
-color:#d8ffe8;
+
+color:#d9ffe7;
+
 }
 
 .s-grid{
@@ -1192,24 +1141,25 @@ gap:25px;
 
 .s-card{
 
-padding:35px;
+padding:30px;
 
 border-radius:25px;
 
 background:
 rgba(255,255,255,.08);
 
-backdrop-filter:blur(10px);
-
 border:
-1px solid rgba(255,255,255,.15);
+1px solid rgba(255,255,255,.12);
+
+backdrop-filter:blur(10px);
 
 }
 
 .s-card img{
 
 width:100%;
-height:200px;
+
+height:220px;
 
 object-fit:cover;
 
@@ -1242,7 +1192,7 @@ line-height:1.8;
 <h2>Projetos em Destaque</h2>
 
 <p>
-Soluções implementadas para aumentar eficiência, produtividade e sustentabilidade no campo.
+Casos de sucesso desenvolvidos para aumentar eficiência, produtividade e sustentabilidade.
 </p>
 
 </div>
@@ -1258,7 +1208,7 @@ Soluções implementadas para aumentar eficiência, produtividade e sustentabili
 <h3>Agricultura de Precisão</h3>
 
 <p>
-Integração de sensores, análise de solo e monitoramento contínuo para maximizar resultados produtivos.
+Uso de sensores e análise avançada para otimizar decisões e elevar a produtividade das lavouras.
 </p>
 
 </div>
@@ -1271,10 +1221,10 @@ Integração de sensores, análise de solo e monitoramento contínuo para maximi
 
 <div class="project-content">
 
-<h3>Gestão Hídrica Inteligente</h3>
+<h3>Gestão Inteligente da Água</h3>
 
 <p>
-Uso eficiente dos recursos hídricos através de sistemas inteligentes de irrigação.
+Controle eficiente da irrigação para reduzir desperdícios e aumentar a sustentabilidade.
 </p>
 
 </div>
@@ -1290,7 +1240,7 @@ Uso eficiente dos recursos hídricos através de sistemas inteligentes de irriga
 <h3>Monitoramento Ambiental</h3>
 
 <p>
-Acompanhamento permanente das condições ambientais para decisões mais seguras.
+Análise contínua das condições ambientais para garantir operações mais seguras e eficientes.
 </p>
 
 </div>
@@ -1305,10 +1255,10 @@ Acompanhamento permanente das condições ambientais para decisões mais seguras
 
 <div class="section-title">
 
-<h2>Nossa Trajetória</h2>
+<h2>Nossa Evolução</h2>
 
 <p>
-Uma história construída com inovação, crescimento e compromisso com o agronegócio.
+Uma trajetória marcada por inovação, crescimento e compromisso com o agronegócio.
 </p>
 
 </div>
@@ -1332,14 +1282,14 @@ Uma história construída com inovação, crescimento e compromisso com o agrone
 <div class="timeline-item">
 <div class="timeline-box">
 <h3>2022</h3>
-<p>Expansão das operações e novos parceiros.</p>
+<p>Expansão para novos mercados e regiões.</p>
 </div>
 </div>
 
 <div class="timeline-item">
 <div class="timeline-box">
 <h3>2025</h3>
-<p>Integração de análise de dados e sustentabilidade em larga escala.</p>
+<p>Integração completa de análise de dados e sustentabilidade.</p>
 </div>
 </div>
 
@@ -1351,10 +1301,10 @@ Uma história construída com inovação, crescimento e compromisso com o agrone
 
 <div class="section-title">
 
-<h2>Sustentabilidade em Ação</h2>
+<h2>Sustentabilidade em Primeiro Lugar</h2>
 
 <p>
-Tecnologia e responsabilidade ambiental caminhando juntas para construir um futuro melhor.
+Aliamos produtividade e responsabilidade ambiental para construir um futuro mais equilibrado.
 </p>
 
 </div>
@@ -1368,7 +1318,7 @@ Tecnologia e responsabilidade ambiental caminhando juntas para construir um futu
 <h3>Preservação Ambiental</h3>
 
 <p>
-Estratégias que reduzem impactos ambientais e promovem equilíbrio ecológico.
+Práticas agrícolas que reduzem impactos e preservam os recursos naturais.
 </p>
 
 </div>
@@ -1380,7 +1330,7 @@ Estratégias que reduzem impactos ambientais e promovem equilíbrio ecológico.
 <h3>Uso Inteligente da Água</h3>
 
 <p>
-Monitoramento e otimização do consumo hídrico nas operações agrícolas.
+Tecnologias para monitorar e otimizar o consumo hídrico em todas as etapas da produção.
 </p>
 
 </div>
@@ -1392,14 +1342,15 @@ Monitoramento e otimização do consumo hídrico nas operações agrícolas.
 <h3>Produção Responsável</h3>
 
 <p>
-Práticas sustentáveis voltadas para produtividade e conservação dos recursos naturais.
+Soluções que unem eficiência operacional, rentabilidade e sustentabilidade.
 </p>
 
 </div>
 
 </div>
 
-</section><style>
+</section>
+<style>
 
 /* DEPOIMENTOS */
 
@@ -1445,7 +1396,7 @@ line-height:1.9;
 
 color:#555;
 
-margin-bottom:25px;
+margin-bottom:20px;
 
 }
 
@@ -1472,7 +1423,7 @@ object-fit:cover;
 
 color:var(--verde);
 
-margin-bottom:4px;
+margin-bottom:5px;
 
 }
 
@@ -1481,6 +1432,7 @@ margin-bottom:4px;
 .faq{
 
 max-width:1100px;
+
 margin:auto;
 
 display:grid;
@@ -1535,7 +1487,7 @@ gap:40px;
 
 }
 
-.contact-info{
+.contact-box{
 
 background:white;
 
@@ -1548,7 +1500,7 @@ box-shadow:
 
 }
 
-.contact-info h3{
+.contact-box h3{
 
 color:var(--verde);
 
@@ -1558,7 +1510,7 @@ font-size:1.8rem;
 
 }
 
-.contact-info p{
+.contact-box p{
 
 line-height:2;
 
@@ -1567,19 +1519,6 @@ margin-bottom:10px;
 }
 
 .contact-form{
-
-background:white;
-
-padding:40px;
-
-border-radius:30px;
-
-box-shadow:
-0 20px 50px rgba(0,0,0,.08);
-
-}
-
-.contact-form form{
 
 display:flex;
 
@@ -1596,7 +1535,7 @@ padding:18px;
 
 border:none;
 
-background:#f5f7f8;
+background:#f3f5f6;
 
 border-radius:15px;
 
@@ -1620,18 +1559,18 @@ border:none;
 
 border-radius:50px;
 
-cursor:pointer;
-
-font-weight:700;
-
-color:white;
-
 background:
 linear-gradient(
 45deg,
 var(--verde),
 var(--verde-claro)
 );
+
+color:white;
+
+font-weight:700;
+
+cursor:pointer;
 
 }
 
@@ -1701,7 +1640,7 @@ text-decoration:none;
 <h2>O Que Nossos Clientes Dizem</h2>
 
 <p>
-Resultados reais obtidos por produtores e empresas que confiaram em nossas soluções.
+Empresas e produtores que alcançaram novos resultados com nossas soluções.
 </p>
 
 </div>
@@ -1711,7 +1650,7 @@ Resultados reais obtidos por produtores e empresas que confiaram em nossas solu�
 <div class="testimonial">
 
 <p>
-"A Agro Forte trouxe uma nova visão para nossa produção. Conseguimos reduzir custos e aumentar a produtividade."
+“A Agro Forte trouxe uma nova visão para nossa produção. Conseguimos aumentar a produtividade e reduzir desperdícios.”
 </p>
 
 <div class="client">
@@ -1719,8 +1658,11 @@ Resultados reais obtidos por produtores e empresas que confiaram em nossas solu�
 <img src="https://randomuser.me/api/portraits/men/32.jpg">
 
 <div class="client-info">
+
 <h4>Carlos Mendes</h4>
-<p>Produtor Rural</p>
+
+<span>Produtor Rural</span>
+
 </div>
 
 </div>
@@ -1730,7 +1672,7 @@ Resultados reais obtidos por produtores e empresas que confiaram em nossas solu�
 <div class="testimonial">
 
 <p>
-"As análises e relatórios ajudaram nossa equipe a tomar decisões muito mais estratégicas."
+“As análises estratégicas e os relatórios transformaram nossa forma de tomar decisões.”
 </p>
 
 <div class="client">
@@ -1738,8 +1680,11 @@ Resultados reais obtidos por produtores e empresas que confiaram em nossas solu�
 <img src="https://randomuser.me/api/portraits/women/44.jpg">
 
 <div class="client-info">
+
 <h4>Ana Ribeiro</h4>
-<p>Engenheira Agrônoma</p>
+
+<span>Engenheira Agrônoma</span>
+
 </div>
 
 </div>
@@ -1749,7 +1694,7 @@ Resultados reais obtidos por produtores e empresas que confiaram em nossas solu�
 <div class="testimonial">
 
 <p>
-"Excelente suporte e tecnologia de ponta. Hoje temos muito mais controle sobre nossas operações."
+“Excelente suporte, tecnologia moderna e resultados consistentes para nossa operação.”
 </p>
 
 <div class="client">
@@ -1757,8 +1702,11 @@ Resultados reais obtidos por produtores e empresas que confiaram em nossas solu�
 <img src="https://randomuser.me/api/portraits/men/51.jpg">
 
 <div class="client-info">
+
 <h4>Roberto Lima</h4>
-<p>Empresário do Agro</p>
+
+<span>Empresário do Agro</span>
+
 </div>
 
 </div>
@@ -1776,7 +1724,7 @@ Resultados reais obtidos por produtores e empresas que confiaram em nossas solu�
 <h2>Perguntas Frequentes</h2>
 
 <p>
-Respostas para as principais dúvidas sobre nossos serviços.
+As respostas para as dúvidas mais comuns sobre nossos serviços.
 </p>
 
 </div>
@@ -1784,24 +1732,33 @@ Respostas para as principais dúvidas sobre nossos serviços.
 <div class="faq">
 
 <div class="faq-item">
+
 <h3>Como funciona o monitoramento agrícola?</h3>
+
 <p>
-Utilizamos sensores, drones e análise de dados para acompanhar as condições das lavouras em tempo real.
+Utilizamos sensores, drones e análise de dados para acompanhar o desenvolvimento das lavouras em tempo real.
 </p>
+
 </div>
 
 <div class="faq-item">
-<h3>As soluções atendem pequenas propriedades?</h3>
+
+<h3>As soluções servem para pequenas propriedades?</h3>
+
 <p>
-Sim. Desenvolvemos projetos adaptados para propriedades de diferentes portes.
+Sim. Adaptamos nossos serviços para diferentes tamanhos de operação.
 </p>
+
 </div>
 
 <div class="faq-item">
-<h3>Quais benefícios posso esperar?</h3>
+
+<h3>Quais resultados posso esperar?</h3>
+
 <p>
-Maior produtividade, redução de desperdícios, melhor gestão e aumento da eficiência operacional.
+Maior produtividade, redução de custos, melhor gestão e aumento da eficiência operacional.
 </p>
+
 </div>
 
 </div>
@@ -1815,14 +1772,14 @@ Maior produtividade, redução de desperdícios, melhor gestão e aumento da efi
 <h2>Entre em Contato</h2>
 
 <p>
-Nossa equipe está pronta para ajudar sua propriedade ou empresa a alcançar novos resultados.
+Nossa equipe está pronta para ajudar você a alcançar melhores resultados.
 </p>
 
 </div>
 
 <div class="contact">
 
-<div class="contact-info">
+<div class="contact-box">
 
 <h3>Fale Conosco</h3>
 
@@ -1838,9 +1795,9 @@ Atendimento especializado para produtores rurais, cooperativas e empresas do agr
 
 </div>
 
-<div class="contact-form">
+<div class="contact-box">
 
-<form>
+<form class="contact-form">
 
 <input type="text" placeholder="Seu nome">
 
@@ -1851,7 +1808,9 @@ Atendimento especializado para produtores rurais, cooperativas e empresas do agr
 <textarea placeholder="Digite sua mensagem"></textarea>
 
 <button type="submit">
+
 Enviar Mensagem
+
 </button>
 
 </form>
@@ -1865,20 +1824,993 @@ Enviar Mensagem
 <section class="cta">
 
 <h2>
-Leve Sua Produção para o Próximo Nível
+Pronto para Transformar Seus Resultados?
 </h2>
 
 <p>
-Conte com tecnologia, inovação e sustentabilidade para transformar seus resultados.
+Descubra como nossas soluções podem levar sua produção para um novo nível de eficiência e rentabilidade.
 </p>
 
 <a href="#contato">
 Solicitar Consultoria
 </a>
 
-</section><style>
+</section>
+<style>
 
-/* FOOTER PREMIUM */
+/* DEPOIMENTOS */
+
+.testimonials{
+
+max-width:1400px;
+margin:auto;
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(320px,1fr));
+
+gap:30px;
+
+}
+
+.testimonial{
+
+background:white;
+
+padding:35px;
+
+border-radius:30px;
+
+box-shadow:
+0 20px 50px rgba(0,0,0,.08);
+
+transition:.4s;
+
+}
+
+.testimonial:hover{
+
+transform:
+translateY(-10px);
+
+}
+
+.testimonial p{
+
+line-height:1.9;
+
+color:#555;
+
+margin-bottom:20px;
+
+}
+
+.client{
+
+display:flex;
+align-items:center;
+gap:15px;
+
+}
+
+.client img{
+
+width:70px;
+height:70px;
+
+border-radius:50%;
+
+object-fit:cover;
+
+}
+
+.client-info h4{
+
+color:var(--verde);
+
+margin-bottom:5px;
+
+}
+
+/* FAQ */
+
+.faq{
+
+max-width:1100px;
+
+margin:auto;
+
+display:grid;
+
+gap:20px;
+
+}
+
+.faq-item{
+
+background:white;
+
+padding:30px;
+
+border-radius:20px;
+
+box-shadow:
+0 15px 40px rgba(0,0,0,.08);
+
+}
+
+.faq-item h3{
+
+color:var(--verde);
+
+margin-bottom:12px;
+
+}
+
+.faq-item p{
+
+line-height:1.8;
+
+color:#666;
+
+}
+
+/* CONTATO */
+
+.contact{
+
+max-width:1400px;
+
+margin:auto;
+
+display:grid;
+
+grid-template-columns:
+1fr 1fr;
+
+gap:40px;
+
+}
+
+.contact-box{
+
+background:white;
+
+padding:40px;
+
+border-radius:30px;
+
+box-shadow:
+0 20px 50px rgba(0,0,0,.08);
+
+}
+
+.contact-box h3{
+
+color:var(--verde);
+
+margin-bottom:20px;
+
+font-size:1.8rem;
+
+}
+
+.contact-box p{
+
+line-height:2;
+
+margin-bottom:10px;
+
+}
+
+.contact-form{
+
+display:flex;
+
+flex-direction:column;
+
+gap:15px;
+
+}
+
+.contact-form input,
+.contact-form textarea{
+
+padding:18px;
+
+border:none;
+
+background:#f3f5f6;
+
+border-radius:15px;
+
+font-size:1rem;
+
+}
+
+.contact-form textarea{
+
+height:180px;
+
+resize:none;
+
+}
+
+.contact-form button{
+
+padding:18px;
+
+border:none;
+
+border-radius:50px;
+
+background:
+linear-gradient(
+45deg,
+var(--verde),
+var(--verde-claro)
+);
+
+color:white;
+
+font-weight:700;
+
+cursor:pointer;
+
+}
+
+/* CTA */
+
+.cta{
+
+padding:140px 8%;
+
+text-align:center;
+
+background:
+linear-gradient(
+135deg,
+var(--verde),
+var(--verde-claro)
+);
+
+color:white;
+
+}
+
+.cta h2{
+
+font-size:4rem;
+
+margin-bottom:20px;
+
+}
+
+.cta p{
+
+max-width:800px;
+
+margin:auto;
+
+line-height:1.9;
+
+margin-bottom:35px;
+
+}
+
+.cta a{
+
+display:inline-block;
+
+padding:18px 42px;
+
+border-radius:50px;
+
+background:white;
+
+color:var(--verde);
+
+font-weight:700;
+
+text-decoration:none;
+
+}
+
+</style>
+
+<section>
+
+<div class="section-title">
+
+<h2>O Que Nossos Clientes Dizem</h2>
+
+<p>
+Empresas e produtores que alcançaram novos resultados com nossas soluções.
+</p>
+
+</div>
+
+<div class="testimonials">
+
+<div class="testimonial">
+
+<p>
+“A Agro Forte trouxe uma nova visão para nossa produção. Conseguimos aumentar a produtividade e reduzir desperdícios.”
+</p>
+
+<div class="client">
+
+<img src="https://randomuser.me/api/portraits/men/32.jpg">
+
+<div class="client-info">
+
+<h4>Carlos Mendes</h4>
+
+<span>Produtor Rural</span>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="testimonial">
+
+<p>
+“As análises estratégicas e os relatórios transformaram nossa forma de tomar decisões.”
+</p>
+
+<div class="client">
+
+<img src="https://randomuser.me/api/portraits/women/44.jpg">
+
+<div class="client-info">
+
+<h4>Ana Ribeiro</h4>
+
+<span>Engenheira Agrônoma</span>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="testimonial">
+
+<p>
+“Excelente suporte, tecnologia moderna e resultados consistentes para nossa operação.”
+</p>
+
+<div class="client">
+
+<img src="https://randomuser.me/api/portraits/men/51.jpg">
+
+<div class="client-info">
+
+<h4>Roberto Lima</h4>
+
+<span>Empresário do Agro</span>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="section-title">
+
+<h2>Perguntas Frequentes</h2>
+
+<p>
+As respostas para as dúvidas mais comuns sobre nossos serviços.
+</p>
+
+</div>
+
+<div class="faq">
+
+<div class="faq-item">
+
+<h3>Como funciona o monitoramento agrícola?</h3>
+
+<p>
+Utilizamos sensores, drones e análise de dados para acompanhar o desenvolvimento das lavouras em tempo real.
+</p>
+
+</div>
+
+<div class="faq-item">
+
+<h3>As soluções servem para pequenas propriedades?</h3>
+
+<p>
+Sim. Adaptamos nossos serviços para diferentes tamanhos de operação.
+</p>
+
+</div>
+
+<div class="faq-item">
+
+<h3>Quais resultados posso esperar?</h3>
+
+<p>
+Maior produtividade, redução de custos, melhor gestão e aumento da eficiência operacional.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="contato">
+
+<div class="section-title">
+
+<h2>Entre em Contato</h2>
+
+<p>
+Nossa equipe está pronta para ajudar você a alcançar melhores resultados.
+</p>
+
+</div>
+
+<div class="contact">
+
+<div class="contact-box">
+
+<h3>Fale Conosco</h3>
+
+<p>📍 Brasil</p>
+
+<p>📞 (00) 00000-0000</p>
+
+<p>✉ contato@agroforte.com</p>
+
+<p>
+Atendimento especializado para produtores rurais, cooperativas e empresas do agronegócio.
+</p>
+
+</div>
+
+<div class="contact-box">
+
+<form class="contact-form">
+
+<input type="text" placeholder="Seu nome">
+
+<input type="email" placeholder="Seu e-mail">
+
+<input type="text" placeholder="Assunto">
+
+<textarea placeholder="Digite sua mensagem"></textarea>
+
+<button type="submit">
+
+Enviar Mensagem
+
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="cta">
+
+<h2>
+Pronto para Transformar Seus Resultados?
+</h2>
+
+<p>
+Descubra como nossas soluções podem levar sua produção para um novo nível de eficiência e rentabilidade.
+</p>
+
+<a href="#contato">
+Solicitar Consultoria
+</a>
+
+</section>
+<style>
+
+/* DEPOIMENTOS */
+
+.testimonials{
+
+max-width:1400px;
+margin:auto;
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(320px,1fr));
+
+gap:30px;
+
+}
+
+.testimonial{
+
+background:white;
+
+padding:35px;
+
+border-radius:30px;
+
+box-shadow:
+0 20px 50px rgba(0,0,0,.08);
+
+transition:.4s;
+
+}
+
+.testimonial:hover{
+
+transform:
+translateY(-10px);
+
+}
+
+.testimonial p{
+
+line-height:1.9;
+
+color:#555;
+
+margin-bottom:20px;
+
+}
+
+.client{
+
+display:flex;
+align-items:center;
+gap:15px;
+
+}
+
+.client img{
+
+width:70px;
+height:70px;
+
+border-radius:50%;
+
+object-fit:cover;
+
+}
+
+.client-info h4{
+
+color:var(--verde);
+
+margin-bottom:5px;
+
+}
+
+/* FAQ */
+
+.faq{
+
+max-width:1100px;
+
+margin:auto;
+
+display:grid;
+
+gap:20px;
+
+}
+
+.faq-item{
+
+background:white;
+
+padding:30px;
+
+border-radius:20px;
+
+box-shadow:
+0 15px 40px rgba(0,0,0,.08);
+
+}
+
+.faq-item h3{
+
+color:var(--verde);
+
+margin-bottom:12px;
+
+}
+
+.faq-item p{
+
+line-height:1.8;
+
+color:#666;
+
+}
+
+/* CONTATO */
+
+.contact{
+
+max-width:1400px;
+
+margin:auto;
+
+display:grid;
+
+grid-template-columns:
+1fr 1fr;
+
+gap:40px;
+
+}
+
+.contact-box{
+
+background:white;
+
+padding:40px;
+
+border-radius:30px;
+
+box-shadow:
+0 20px 50px rgba(0,0,0,.08);
+
+}
+
+.contact-box h3{
+
+color:var(--verde);
+
+margin-bottom:20px;
+
+font-size:1.8rem;
+
+}
+
+.contact-box p{
+
+line-height:2;
+
+margin-bottom:10px;
+
+}
+
+.contact-form{
+
+display:flex;
+
+flex-direction:column;
+
+gap:15px;
+
+}
+
+.contact-form input,
+.contact-form textarea{
+
+padding:18px;
+
+border:none;
+
+background:#f3f5f6;
+
+border-radius:15px;
+
+font-size:1rem;
+
+}
+
+.contact-form textarea{
+
+height:180px;
+
+resize:none;
+
+}
+
+.contact-form button{
+
+padding:18px;
+
+border:none;
+
+border-radius:50px;
+
+background:
+linear-gradient(
+45deg,
+var(--verde),
+var(--verde-claro)
+);
+
+color:white;
+
+font-weight:700;
+
+cursor:pointer;
+
+}
+
+/* CTA */
+
+.cta{
+
+padding:140px 8%;
+
+text-align:center;
+
+background:
+linear-gradient(
+135deg,
+var(--verde),
+var(--verde-claro)
+);
+
+color:white;
+
+}
+
+.cta h2{
+
+font-size:4rem;
+
+margin-bottom:20px;
+
+}
+
+.cta p{
+
+max-width:800px;
+
+margin:auto;
+
+line-height:1.9;
+
+margin-bottom:35px;
+
+}
+
+.cta a{
+
+display:inline-block;
+
+padding:18px 42px;
+
+border-radius:50px;
+
+background:white;
+
+color:var(--verde);
+
+font-weight:700;
+
+text-decoration:none;
+
+}
+
+</style>
+
+<section>
+
+<div class="section-title">
+
+<h2>O Que Nossos Clientes Dizem</h2>
+
+<p>
+Empresas e produtores que alcançaram novos resultados com nossas soluções.
+</p>
+
+</div>
+
+<div class="testimonials">
+
+<div class="testimonial">
+
+<p>
+“A Agro Forte trouxe uma nova visão para nossa produção. Conseguimos aumentar a produtividade e reduzir desperdícios.”
+</p>
+
+<div class="client">
+
+<img src="https://randomuser.me/api/portraits/men/32.jpg">
+
+<div class="client-info">
+
+<h4>Carlos Mendes</h4>
+
+<span>Produtor Rural</span>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="testimonial">
+
+<p>
+“As análises estratégicas e os relatórios transformaram nossa forma de tomar decisões.”
+</p>
+
+<div class="client">
+
+<img src="https://randomuser.me/api/portraits/women/44.jpg">
+
+<div class="client-info">
+
+<h4>Ana Ribeiro</h4>
+
+<span>Engenheira Agrônoma</span>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="testimonial">
+
+<p>
+“Excelente suporte, tecnologia moderna e resultados consistentes para nossa operação.”
+</p>
+
+<div class="client">
+
+<img src="https://randomuser.me/api/portraits/men/51.jpg">
+
+<div class="client-info">
+
+<h4>Roberto Lima</h4>
+
+<span>Empresário do Agro</span>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="section-title">
+
+<h2>Perguntas Frequentes</h2>
+
+<p>
+As respostas para as dúvidas mais comuns sobre nossos serviços.
+</p>
+
+</div>
+
+<div class="faq">
+
+<div class="faq-item">
+
+<h3>Como funciona o monitoramento agrícola?</h3>
+
+<p>
+Utilizamos sensores, drones e análise de dados para acompanhar o desenvolvimento das lavouras em tempo real.
+</p>
+
+</div>
+
+<div class="faq-item">
+
+<h3>As soluções servem para pequenas propriedades?</h3>
+
+<p>
+Sim. Adaptamos nossos serviços para diferentes tamanhos de operação.
+</p>
+
+</div>
+
+<div class="faq-item">
+
+<h3>Quais resultados posso esperar?</h3>
+
+<p>
+Maior produtividade, redução de custos, melhor gestão e aumento da eficiência operacional.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="contato">
+
+<div class="section-title">
+
+<h2>Entre em Contato</h2>
+
+<p>
+Nossa equipe está pronta para ajudar você a alcançar melhores resultados.
+</p>
+
+</div>
+
+<div class="contact">
+
+<div class="contact-box">
+
+<h3>Fale Conosco</h3>
+
+<p>📍 Brasil</p>
+
+<p>📞 (00) 00000-0000</p>
+
+<p>✉ contato@agroforte.com</p>
+
+<p>
+Atendimento especializado para produtores rurais, cooperativas e empresas do agronegócio.
+</p>
+
+</div>
+
+<div class="contact-box">
+
+<form class="contact-form">
+
+<input type="text" placeholder="Seu nome">
+
+<input type="email" placeholder="Seu e-mail">
+
+<input type="text" placeholder="Assunto">
+
+<textarea placeholder="Digite sua mensagem"></textarea>
+
+<button type="submit">
+
+Enviar Mensagem
+
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="cta">
+
+<h2>
+Pronto para Transformar Seus Resultados?
+</h2>
+
+<p>
+Descubra como nossas soluções podem levar sua produção para um novo nível de eficiência e rentabilidade.
+</p>
+
+<a href="#contato">
+Solicitar Consultoria
+</a>
+
+</section>
+<style>
+
+/* FOOTER */
 
 footer{
 
@@ -1886,12 +2818,12 @@ background:
 linear-gradient(
 180deg,
 #04120c,
-#020a07
+#020806
 );
 
 color:white;
 
-padding:90px 8% 30px;
+padding:80px 8% 30px;
 
 }
 
@@ -1906,7 +2838,7 @@ display:grid;
 grid-template-columns:
 2fr 1fr 1fr 1fr;
 
-gap:50px;
+gap:40px;
 
 }
 
@@ -1915,8 +2847,6 @@ gap:50px;
 font-size:2rem;
 
 font-weight:800;
-
-color:white;
 
 margin-bottom:20px;
 
@@ -1966,23 +2896,6 @@ padding-left:5px;
 
 }
 
-.footer-bottom{
-
-max-width:1400px;
-
-margin:50px auto 0;
-
-padding-top:25px;
-
-border-top:
-1px solid rgba(255,255,255,.1);
-
-text-align:center;
-
-color:rgba(255,255,255,.6);
-
-}
-
 /* RESPONSIVIDADE */
 
 @media(max-width:1100px){
@@ -1999,10 +2912,6 @@ grid-template-columns:1fr;
 grid-template-columns:1fr 1fr;
 }
 
-.hero h1{
-font-size:4rem;
-}
-
 .timeline::before{
 left:20px;
 }
@@ -2012,13 +2921,14 @@ left:20px;
 .timeline-item:nth-child(even){
 
 width:100%;
-
 left:0;
-
 text-align:left;
-
 padding-left:60px;
 
+}
+
+.hero h1{
+font-size:4rem;
 }
 
 }
@@ -2031,10 +2941,6 @@ display:none;
 
 .hero h1{
 font-size:3rem;
-}
-
-.hero p{
-font-size:1rem;
 }
 
 .section-title h2{
@@ -2053,28 +2959,28 @@ font-size:2.5rem;
 grid-template-columns:1fr;
 }
 
-.hero{
-padding:120px 20px;
-}
-
 .hero h1{
 font-size:2.2rem;
 }
 
+.hero p{
+font-size:1rem;
+}
+
+.section-title h2{
+font-size:1.9rem;
+}
+
 .btn{
-width:100%;
 display:block;
+width:100%;
 }
 
 .cta h2{
 font-size:2rem;
 }
 
-.section-title h2{
-font-size:2rem;
-}
-
-.about-image img{
+.about img{
 height:350px;
 }
 
@@ -2089,14 +2995,16 @@ height:350px;
 <div>
 
 <div class="footer-logo">
+
 Agro<span>Forte</span>
+
 </div>
 
 <p class="footer-text">
 
-Transformando o agronegócio por meio da inovação,
-tecnologia e sustentabilidade. Soluções inteligentes
-para um futuro mais produtivo e eficiente.
+Tecnologia, inovação e sustentabilidade para impulsionar o agronegócio brasileiro.
+
+Soluções inteligentes para aumentar produtividade, reduzir custos e gerar resultados reais.
 
 </p>
 
@@ -2109,7 +3017,7 @@ para um futuro mais produtivo e eficiente.
 <a href="#inicio">Início</a>
 <a href="#sobre">Sobre</a>
 <a href="#solucoes">Soluções</a>
-<a href="#tecnologia">Tecnologia</a>
+<a href="#contato">Contato</a>
 
 </div>
 
@@ -2136,7 +3044,13 @@ para um futuro mais produtivo e eficiente.
 
 </div>
 
-<div class="footer-bottom">
+<div style="
+text-align:center;
+margin-top:50px;
+padding-top:25px;
+border-top:1px solid rgba(255,255,255,.1);
+color:rgba(255,255,255,.6);
+">
 
 © 2026 Agro Forte Sustentável — Todos os direitos reservados.
 
